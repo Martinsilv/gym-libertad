@@ -88,7 +88,11 @@ export const Contacto = () => {
 
   return (
     <section className="py-12  px-4 md:px-20">
-      <h3 id="contacto" className="text-3xl font-bold text-center mb-6">
+      <h3
+        id="contacto"
+        style={{ fontFamily: "Bebas Neue, sans-serif" }}
+        className="text-4xl  text-center mb-6"
+      >
         Contáctanos
       </h3>
       <div className="max-w-xl mx-auto flex flex-col gap-4">

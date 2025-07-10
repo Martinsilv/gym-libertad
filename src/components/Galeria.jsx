@@ -41,7 +41,12 @@ export const Galeria = () => {
 
   return (
     <section className="py-12 px-4 md:px-20">
-      <h3 className="text-3xl font-bold text-center mb-6">Galería</h3>
+      <h3
+        style={{ fontFamily: "Bebas Neue, sans-serif" }}
+        className="text-4xl  text-center mb-6"
+      >
+        Galería
+      </h3>
 
       {/* Grid de imágenes original */}
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4 mb-8">
@@ -67,7 +72,7 @@ export const Galeria = () => {
       <div className="text-center">
         <button
           onClick={() => openModal(0)}
-          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+          className="inline-flex items-center px-6 py-3 bg-red-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
         >
           <Eye className="w-5 h-5 mr-2" />
           Ver Fotos

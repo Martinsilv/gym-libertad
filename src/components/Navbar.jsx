@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
 import { NavItem } from "../components/ui/navBarItem";
 import { ScrollLink } from "../components/ScrollLink";
+import { AnimatePresence, motion } from "framer-motion";
 
 import logo from "../assets/logo.png"; // Importa tu logo si es necesario
 import "../App.css";
@@ -16,10 +16,32 @@ export const Navbar = () => {
         <img src={logo} alt="Logo Gimnasio Libertad" className="h-14  w-14" />
         <h1 className="text-2xl  font-bold">Gimnasio Libertad</h1>
         <button
-          className="md:hidden z-50"
+          className="md:hidden z-50 "
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {menuOpen ? <X /> : <Menu />}
+          <AnimatePresence mode="wait">
+            {menuOpen ? (
+              <motion.div
+                key="close"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.1 }}
+              >
+                <X size={36} />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="menu"
+                initial={{ rotate: 90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: -90, opacity: 0 }}
+                transition={{ duration: 0.1 }}
+              >
+                <Menu size={36} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </button>
       </div>
 

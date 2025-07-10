@@ -237,7 +237,10 @@ export const Horarios = () => {
 
         {/* Contact Info */}
         <div className="mt-8 md:mt-12 text-center">
-          <div className="inline-flex items-center justify-center px-6 py-3 bg-green-500 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300">
+          <div
+            style={{ fontFamily: "Bebas Neue, sans-serif" }}
+            className="inline-flex items-center justify-center px-6 py-3 text-lg bg-zinc-800 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
+          >
             <Clock className="w-5 h-5 mr-2" />
             <ScrollLink to="contacto">
               ¿Dudas sobre los horarios? ¡Consúltanos!
