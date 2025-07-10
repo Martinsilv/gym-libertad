@@ -9,7 +9,7 @@ export const Contacto = () => {
     message: "",
   });
 
-  const whatsappNumber = "5493794950237"; // REEMPLAZA CON TU NÚMERO REAL
+  const whatsappNumber = "5493794286202"; // REEMPLAZA CON TU NÚMERO REAL
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
