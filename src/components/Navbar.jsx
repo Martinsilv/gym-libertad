@@ -47,11 +47,6 @@ export const Navbar = () => {
 
       {/* Menú escritorio */}
       <ul className="hidden md:flex gap-6 text-medium ">
-        <ScrollLink to="inicio">
-          <li className="hover:scale-105 transition-transform duration-300">
-            Inicio
-          </li>
-        </ScrollLink>
         <ScrollLink to="profesores">
           <li className="hover:scale-105 transition-transform duration-300">
             Profesores
@@ -65,6 +60,11 @@ export const Navbar = () => {
         <ScrollLink to="contacto">
           <li className="hover:scale-105 transition-transform duration-300">
             Contacto
+          </li>
+        </ScrollLink>
+        <ScrollLink to="ubicacion">
+          <li className="hover:scale-105 transition-transform duration-300">
+            Ubicación
           </li>
         </ScrollLink>
       </ul>
@@ -86,19 +86,19 @@ export const Navbar = () => {
             />
           </div>
           <ul className="flex flex-col items-center gap-11 ">
-            <ScrollLink to="inicio" onClick={() => setMenuOpen(false)}>
-              <NavItem delay={0.1}>Inicio</NavItem>
-            </ScrollLink>
             <ScrollLink to="profesores" onClick={() => setMenuOpen(false)}>
-              <NavItem delay={0.2} className="font-bebas text-4xl">
+              <NavItem delay={0.1} className="font-bebas text-4xl">
                 Profesores
               </NavItem>
             </ScrollLink>
             <ScrollLink to="horarios" onClick={() => setMenuOpen(false)}>
-              <NavItem delay={0.3}>Horarios</NavItem>
+              <NavItem delay={0.2}>Horarios</NavItem>
             </ScrollLink>
             <ScrollLink to="contacto" onClick={() => setMenuOpen(false)}>
-              <NavItem delay={0.4}>Contacto</NavItem>
+              <NavItem delay={0.3}>Contacto</NavItem>
+            </ScrollLink>
+            <ScrollLink to="ubicacion" onClick={() => setMenuOpen(false)}>
+              <NavItem delay={0.4}>Ubicación</NavItem>
             </ScrollLink>
           </ul>
 

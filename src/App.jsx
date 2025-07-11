@@ -5,6 +5,7 @@ import { Horarios } from "./components/Horarios";
 import { Contacto } from "./components/Contacto";
 import { Galeria } from "./components/Galeria";
 import "./fonts/bebasFont.css";
+import { Ubicacion } from "./components/ubicacion";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Profesores />
       <Horarios />
       <Contacto />
+      <Ubicacion />
       <Galeria />
       <footer className="text-center text-sm text-zinc-400 py-6">
         © 2025 Gimnasio Libertad. Todos los derechos reservados.
