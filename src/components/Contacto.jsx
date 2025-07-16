@@ -4,7 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 export const Contacto = () => {
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
+
     service: "",
     message: "",
   });
@@ -40,7 +40,6 @@ export const Contacto = () => {
       const serviceNames = {
         musculacion: "Musculación",
         funcional: "Funcional",
-        entrenamiento: "Entrenamiento Deportivo",
       };
       message += `\n• Servicio de interés: ${serviceNames[formData.service]}`;
     }
@@ -80,7 +79,7 @@ export const Contacto = () => {
     // Limpiar formulario
     setFormData({
       name: "",
-      phone: "",
+
       service: "",
       message: "",
     });
@@ -105,14 +104,6 @@ export const Contacto = () => {
           onChange={handleInputChange}
         />
 
-        <input
-          className="p-3 rounded bg-zinc-700 text-white placeholder-gray-400"
-          type="tel"
-          name="phone"
-          placeholder="Teléfono"
-          value={formData.phone}
-          onChange={handleInputChange}
-        />
         <select
           name="service"
           id="service"
@@ -125,7 +116,6 @@ export const Contacto = () => {
           </option>
           <option value="musculacion">Musculación</option>
           <option value="funcional">Funcional</option>
-          <option value="entrenamiento">Entrenamiento Deportivo</option>
         </select>
         <textarea
           className="p-3 rounded bg-zinc-700 text-white placeholder-gray-400"

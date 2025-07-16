@@ -13,8 +13,8 @@ export default function App() {
     <div className="bg-black text-white font-sans">
       <Navbar />
       <Hero />
-      <Profesores />
       <Horarios />
+      <Profesores />
       <Contacto />
       <Ubicacion />
       <Galeria />

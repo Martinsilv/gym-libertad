@@ -4,7 +4,7 @@ import { NavItem } from "../components/ui/navBarItem";
 import { ScrollLink } from "../components/ScrollLink";
 import { AnimatePresence, motion } from "framer-motion";
 
-import logo from "../assets/logo.png"; // Importa tu logo si es necesario
+import logo from "../assets/logo.png";
 import "../App.css";
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,14 +47,14 @@ export const Navbar = () => {
 
       {/* Menú escritorio */}
       <ul className="hidden md:flex gap-6 text-medium ">
-        <ScrollLink to="profesores">
-          <li className="hover:scale-105 transition-transform duration-300">
-            Profesores
-          </li>
-        </ScrollLink>
         <ScrollLink to="horarios">
           <li className="hover:scale-105  transition-transform duration-300">
             Horarios
+          </li>
+        </ScrollLink>
+        <ScrollLink to="profesores">
+          <li className="hover:scale-105 transition-transform duration-300">
+            Profesores
           </li>
         </ScrollLink>
         <ScrollLink to="contacto">
@@ -86,13 +86,13 @@ export const Navbar = () => {
             />
           </div>
           <ul className="flex flex-col items-center gap-11 ">
+            <ScrollLink to="horarios" onClick={() => setMenuOpen(false)}>
+              <NavItem delay={0.2}>Horarios</NavItem>
+            </ScrollLink>
             <ScrollLink to="profesores" onClick={() => setMenuOpen(false)}>
               <NavItem delay={0.1} className="font-bebas text-4xl">
                 Profesores
               </NavItem>
-            </ScrollLink>
-            <ScrollLink to="horarios" onClick={() => setMenuOpen(false)}>
-              <NavItem delay={0.2}>Horarios</NavItem>
             </ScrollLink>
             <ScrollLink to="contacto" onClick={() => setMenuOpen(false)}>
               <NavItem delay={0.3}>Contacto</NavItem>

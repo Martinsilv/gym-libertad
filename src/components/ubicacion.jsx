@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 
 export const Ubicacion = () => {
-  // Coordenadas de ejemplo - reemplaza con las reales
-  const direccion = "Calle Ejemplo 123, frente a la Facultad de Derecho";
+  const direccion = "Avenida Libertad 5491, Corrientes, Argentina";
   const googleMapsUrl =
     "https://www.google.com/maps/place/Gimnasio+Libertad/@-27.4643886,-58.7809824,20.61z/data=!4m6!3m5!1s0x94456b26d525d453:0x9d9b0ff693ec67dd!8m2!3d-27.4642004!4d-58.7809181!16s%2Fg%2F11pcnyv6vd?entry=ttu&g_ep=EgoyMDI1MDcwOC4wIKXMDSoASAFQAw%3D%3D"; // Reemplaza con tus coordenadas
 
@@ -21,7 +20,6 @@ export const Ubicacion = () => {
         </h3>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Información de ubicación */}
           <div className="space-y-4">
             <div className="flex items-start gap-3">
               <div className="bg-red-600 p-2 rounded-full flex-shrink-0">

@@ -1,47 +1,59 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import profe1 from "../assets/1.jpg";
-import profe2 from "../assets/2.jpg";
+import profe1 from "../assets/profe1.jpeg";
+import profe2 from "../assets/profe2.jpeg";
+import profe3 from "../assets/profe3.jpeg";
+import profe4 from "../assets/profe4.jpeg";
+import profe5 from "../assets/profe5.jpeg";
+import profe6 from "../assets/profe6.jpeg";
+import { Instagram } from "lucide-react";
 
 export const Profesores = () => {
   const [mostrarTodos, setMostrarTodos] = useState(false);
 
   const profesores = [
     {
-      nombre: "Carlos Pérez",
+      nombre: "Jorge González",
+      area: "Funcional",
+      horarios: "Lunes a Viernes 19:00 a 20:00",
+      foto: profe1,
+      instagram: "https://instagram.com/jorgedaniel.gonzalez.944",
+    },
+
+    {
+      nombre: "Nicolás Larroca",
+      area: "Funcional",
+      horarios: "Lunes a Viernes 20:00 - 21:00/ 21:00 - 22:00",
+      foto: profe3,
+      instagram: "https://instagram.com/nicolas_larrocapf",
+    },
+    {
+      nombre: "Lourdes Calvano",
+      area: "Funcional",
+      horarios: "Lunes a Viernes 9:00 - 10:00",
+      foto: profe4,
+      instagram: "https://instagram.com/lulu_.calvano",
+    },
+    {
+      nombre: "Gustavo Pizzutti",
       area: "Musculación",
-      horarios: "Lunes a Viernes 8:00 - 12:00",
-      foto: profe1,
+      horarios: "Lunes a Viernes 19:00 -22:00",
+      foto: profe5,
+      instagram: "https://instagram.com/gustavo_pizzu",
     },
     {
-      nombre: "Laura Gómez",
-      area: "Funcional y Cross",
-      horarios: "Lunes a Viernes 17:00 - 21:00",
+      nombre: "Marilyn Rodríguez",
+      area: "Funcional",
+      horarios: "Lunes a Viernes 08:00 - 09:00/ 16:00 - 17:00/ 17:00 - 18:00",
       foto: profe2,
+      instagram: "https://instagram.com/marilynrodriguez870",
     },
     {
-      nombre: "Pedro Martínez",
-      area: "Entrenamiento Deportivo",
-      horarios: "Lunes a Viernes 9:00 - 13:00",
-      foto: profe1,
-    },
-    {
-      nombre: "Ana Torres",
-      area: "Nutrición",
-      horarios: "Martes y Jueves 10:00 - 12:00",
-      foto: profe2,
-    },
-    {
-      nombre: "Juan Pérez",
-      area: "Entrenamiento Personal",
-      horarios: "Lunes a Sábado 8:00 - 14:00",
-      foto: profe1,
-    },
-    {
-      nombre: "María López",
-      area: "Yoga y Pilates",
-      horarios: "Miércoles y Viernes 18:00 - 20:00",
-      foto: profe2,
+      nombre: "Rosalía Blanco",
+      area: "Musculación",
+      horarios: "Lunes y Viernes 16:00 - 22:00",
+      foto: profe6,
+      instagram: "https://instagram.com/rosi.blanco.7",
     },
   ];
 
@@ -67,11 +79,22 @@ export const Profesores = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.1 }}
           >
-            <img src={p.foto} className="w-full h-60 object-cover" />
+            <img src={p.foto} className="w-full lg:h-72 md:h-40 object-cover" />
             <div className="p-4">
-              <h4 className="text-xl font-semibold">{p.nombre}</h4>
-              <p className="text-sm text-zinc-300">{p.area}</p>
-              <p className="text-sm text-zinc-400">{p.horarios}</p>
+              <h4 className="text-lg  font-semibold">{p.nombre}</h4>
+              <p className="text-base text-zinc-300 ">{p.area}</p>
+              <p className="text-sm  text-zinc-400">{p.horarios}</p>
+              {p.instagram && (
+                <a
+                  href={p.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:underline mt-2 inline-block "
+                >
+                  <Instagram className="inline-block mr-1" />
+                  Instagram
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
